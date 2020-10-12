@@ -15,4 +15,7 @@ export class AppComponent {
     {title: 'Love Balloons', thought: 'who doesnt love balloons? Monsters thats who'}
   ];
 
+  clickResults = function(){
+    
+  }
 }
