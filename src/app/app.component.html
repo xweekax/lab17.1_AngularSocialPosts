@@ -1,0 +1,9 @@
+<div>
+  <h1>My Thoughts</h1>
+  <button (click)="clickResults()">New Thought</button>
+  <div *ngFor="let idea of ideas; ">
+    <h3>{{idea.title}}</h3>
+    <p>{{idea.thought}}</p>
+  </div>
+
+</div>
