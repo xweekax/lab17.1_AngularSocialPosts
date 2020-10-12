@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Post } from '../post';
 
 @Component({
   selector: 'app-post-form',
@@ -7,7 +8,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class PostFormComponent implements OnInit {
 
-  @Output() submitted = new EventEmitter<string>();
+  @Output() submitted = new EventEmitter<Post>();
   title = '';
   thought = '';
 
@@ -17,6 +18,8 @@ export class PostFormComponent implements OnInit {
   }
 
   submitPost = function(){
-    this.submitted.emit(`${this.title} ${this.thought}`);
+    //this.submitted.emit(`${this.title} ${this.thought}`);
+    let p: Post = {title: this.title, thought: this.thought};
+    this.submitted.emit(p)
   }
 }
