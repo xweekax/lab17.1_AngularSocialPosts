@@ -20,6 +20,6 @@ export class PostFormComponent implements OnInit {
   submitPost = function(){
     //this.submitted.emit(`${this.title} ${this.thought}`);
     let p: Post = {title: this.title, thought: this.thought};
-    this.submitted.emit(p)
+    this.submitted.emit(p);
   }
 }
